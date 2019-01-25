@@ -211,43 +211,43 @@
 						  </button>
 						  <ul class="dropdown-menu dropdown-menu-right">
 						    <li>
-						    	<a href="<?php echo  BASE_URL.DS ?>paies/personnel/2"><span class="fa fa-"></span> Administratif Direct</a>
+						    	<a href="<?php echo BASE_URL.DS ?>paies/personnel/2"><span class="fa fa-"></span> Administratif Direct</a>
 						    </li>
 					 		 <li>
-						    	<a href="<?php echo  BASE_URL.DS ?>paies/personnel/1"><span class="fa fa-"></span> Administratif Indirect</a>
+						    	<a href="<?php echo BASE_URL.DS ?>paies/personnel/1"><span class="fa fa-"></span> Administratif Indirect</a>
 						    </li>
 						     <li>
-						    	<a href="<?php echo  BASE_URL.DS ?>paies/personnel/3"><span class="fa fa-"></span> Emission offshore</a>
+						    	<a href="<?php echo BASE_URL.DS ?>paies/personnel/3"><span class="fa fa-"></span> Emission offshore</a>
 						    </li>
                 <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/7"><span class="fa fa-"></span> Emission locale</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/7"><span class="fa fa-"></span> Emission locale</a>
                 </li>
 						     <li>
-						    	<a href="<?php echo  BASE_URL.DS ?>paies/personnel/4"><span class="fa fa-"></span> Réception MTN</a>
+						    	<a href="<?php echo BASE_URL.DS ?>paies/personnel/4"><span class="fa fa-"></span> Réception MTN</a>
 						    </li>
                 <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/9"><span class="fa fa-"></span> Réception MOOV</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/9"><span class="fa fa-"></span> Réception MOOV</a>
                 </li>
                 <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/10"><span class="fa fa-"></span> Digital Moov</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/10"><span class="fa fa-"></span> Digital Moov</a>
                 </li>
                 <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/11"><span class="fa fa-"></span> Digital MTN</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/11"><span class="fa fa-"></span> Digital MTN</a>
                 </li>
                 <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/12"><span class="fa fa-"></span> Commerciaux Terrain</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/12"><span class="fa fa-"></span> Commerciaux Terrain</a>
                 </li>
                 <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/13"><span class="fa fa-"></span> Backoffice Moov</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/13"><span class="fa fa-"></span> Backoffice Moov</a>
                 </li>
                 <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/14"><span class="fa fa-"></span> Backoffice MTN</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/14"><span class="fa fa-"></span> Backoffice MTN</a>
                 </li>
 						     <li>
-						    	<a href="<?php echo  BASE_URL.DS ?>paies/personnel/5"><span class="fa fa-"></span> Entretien</a>
+						    	<a href="<?php echo BASE_URL.DS ?>paies/personnel/5"><span class="fa fa-"></span> Entretien</a>
 						    </li>
 						     <li>
-						    	<a href="<?php echo  BASE_URL.DS ?>paies/personnel/6"><span class="fa fa-"></span> ABFPA</a>
+						    	<a href="<?php echo BASE_URL.DS ?>paies/personnel/6"><span class="fa fa-"></span> ABFPA</a>
 						    </li>
 
 						  </ul>
@@ -261,19 +261,19 @@
               </button>
               <ul class="dropdown-menu dropdown-menu-right">
                 <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/viewfraismission"><span class="fa fa-"></span> Frais de mission</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/viewfraismission"><span class="fa fa-"></span> Frais de mission</a>
                 </li>
                <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/viewavance"><span class="fa fa-"></span> Avance sur salaire</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/viewavance"><span class="fa fa-"></span> Avance sur salaire</a>
                 </li>
                  <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/viewretenue"><span class="fa fa-"></span> Retenue sur salaire</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/viewretenue"><span class="fa fa-"></span> Retenue sur salaire</a>
                 </li>
                  <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/viewregularisation"><span class="fa fa-"></span> Régularisation</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/viewregularisation"><span class="fa fa-"></span> Régularisation</a>
                 </li>
                  <!-- <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/viewprime"><span class="fa fa-"></span> Prime DG</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/viewprime"><span class="fa fa-"></span> Prime DG</a>
                 </li> -->
 
               </ul>
@@ -318,19 +318,19 @@
               </button>
               <ul class="dropdown-menu dropdown-menu-right">
                 <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/2"><span class="fa fa-"></span> Type d'abscence</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/2"><span class="fa fa-"></span> Type d'abscence</a>
                 </li>
                <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/1"><span class="fa fa-"></span> Type de contrat</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/1"><span class="fa fa-"></span> Type de contrat</a>
                 </li>
                  <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/3"><span class="fa fa-"></span> Type de sanction</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/3"><span class="fa fa-"></span> Type de sanction</a>
                 </li>
                  <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/5"><span class="fa fa-"></span> Type de certificat</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/5"><span class="fa fa-"></span> Type de certificat</a>
                 </li>
                  <li>
-                  <a href="<?php echo  BASE_URL.DS ?>paies/personnel/5"><span class="fa fa-"></span> Motif de sortie</a>
+                  <a href="<?php echo BASE_URL.DS ?>paies/personnel/5"><span class="fa fa-"></span> Motif de sortie</a>
                 </li>
               </ul>
             </div>

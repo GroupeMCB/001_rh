@@ -862,13 +862,13 @@ div.product-details-tab-container {
  * -------------------------
  */
 
-.dataTables_wrapper {
+/*.dataTables_wrapper {
     background-color: #E6ECEF;
     border: 1px #ccc solid;
     border-radius: 4px;
     font-size: 0.9em;
 }
-
+*/
 .dataTables_wrapper .dataTables_info {
     padding: 9px 10px;
     /*background-color: #006587;*/

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,58 +9,58 @@
 
     <title><?php echo isset($title_for_layout)?$title_for_layout: 'MCB APP'; ?></title>
 
-    <?php  if(isset($header) && $header== 1) { 
-      header("Content-disposition: attachment; filename=".$nom); 
-      header("Content-Type: application/force-download"); 
-      header("Content-Transfer-Encoding: $type\n"); // Surtout ne pas enlever le \n
-      header("Pragma: no-cache"); 
-      header("Cache-Control: must-revalidate, post-check=0, pre-check=0, public"); 
-      header("Expires: 0"); 
-      readfile($nom);  
-    } 
-      ?>
+    <?php
+      if(isset($header) && $header== 1) { 
+        header("Content-disposition: attachment; filename=".$nom); 
+        header("Content-Type: application/force-download"); 
+        header("Content-Transfer-Encoding: $type\n"); // Surtout ne pas enlever le \n
+        header("Pragma: no-cache"); 
+        header("Cache-Control: must-revalidate, post-check=0, pre-check=0, public"); 
+        header("Expires: 0"); 
+        readfile($nom);
+      } 
+    ?>
     <!-- Bootstrap Core CSS -->
-    <link href="<?php echo  BASE_URL; ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
-    <!-- Custom CSS -->
-    <link href="<?php echo  BASE_URL; ?>/dist/css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/vendor/bootstrap/css/bootstrap.min.css" type="text/css"> 
+
+
     <!-- Custom Fonts -->
-    <link href="<?php echo  BASE_URL; ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?php echo  BASE_URL; ?>/dist/css/sty.css">
-    <link href="<?php echo  BASE_URL; ?>/dist/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
-    <script src="<?php echo  BASE_URL; ?>/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo  BASE_URL; ?>/dist/js/sb-admin.js"></script>
-    <script src="<?php echo  BASE_URL; ?>/code/highcharts.js"></script>
-    <script src="<?php echo  BASE_URL; ?>/code/highcharts-3d.js"></script>
-    <script src="<?php echo  BASE_URL; ?>/vendor/datatables/dataTables.bootstrap4.css"></script> 
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/vendor/font-awesome/css/all.min.css" type="text/css">
 
-     <script src="<?php echo  BASE_URL; ?>/js/datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
-     <script src="<?php echo  BASE_URL; ?>/js/datepicker/bootstrap-datepicker.min.js" type="text/javascript"></script>
-        <script src="<?php echo  BASE_URL; ?>/vendor/datatables/jquery.dataTables.js"></script> 
-        <script src="<?php echo  BASE_URL; ?>/vendor/datatables/dataTables.bootstrap4.js"></script> 
-     
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>/dist/css/sty.css" type="text/css">
 
-</head>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/dist/css/sb-admin.css" type="text/css">
+
+    <!-- <link href="<?php //echo BASE_URL; ?>/dist/css/daterangepicker-bs3.css" rel="stylesheet" type="text/css" /> -->
+    
+    <link rel="stylesheet" src="<?php echo BASE_URL; ?>/vendor/datatables/css/datatables.min.css" type="text/css">
+
+    <!-- jQuery -->
+    <script src="<?php echo BASE_URL; ?>/vendor/jquery/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="<?php echo BASE_URL; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- script src="<?php //echo BASE_URL; ?>/code/highcharts.js"></script>
+    <script src="<?php //echo BASE_URL; ?>/code/highcharts-3d.js"></script>
+    <script src="<?php //echo BASE_URL; ?>/dist/js/sb-admin.js"></script>
+
+    <script src="<?php //echo BASE_URL; ?>/js/datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="<?php //echo BASE_URL; ?>/js/datepicker/bootstrap-datepicker.min.js" type="text/javascript"></script> -->
+    <!-- <script src="<?php //echo BASE_URL; ?>/vendor/datatables/jquery.dataTables.js"></script> -->
+    <script src="<?php echo BASE_URL; ?>/vendor/datatables/js/datatables.min.js"></script>
+   
+  </head>
   <body id="page-top">
 
     <nav class="navbar navbar-expand navbar-dark bg-dark nav-fixed static-top">
 
       <a class="navbar-brand mr-1" href="#">Ressources Humaines</a>
 
-      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle">
         <i class="fas fa-bars"></i>
       </button>
-
-      <!-- Navbar Search -->
-      <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-        <!-- <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </div> -->
-      </form>
 
       <!-- Navbar -->
       <ul class="navbar-nav fixed ml-auto ml-md-0">
@@ -107,63 +105,135 @@
 
     <div id="wrapper">
 
-       <ul class="sidebar navbar-nav">
-         <li class="nav-item dropdown <?php if($controller == 'personnels' || $controller == 'contrats' ) echo " show " ?>" >
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false" id="#home-pills"  > 
-            <i class="fa fa-users"></i> Personnel</a>
-             <div  class="dropdown-menu <?php if($controller == 'personnels' || $controller == 'contrats' ) echo " show " ?>" aria-labelledby="home-pills">
-               <a class="dropdown-item" href="<?php echo BASE_URL.DS?>personnels/dashboard"> Tableau de bord</a>
-               <a class="dropdown-item " href="<?php echo BASE_URL.DS?>personnels/indicateurs"><i class="fa fa-lightbulb-o"></i> Indicateurs</a>
-               <a class=" dropdown-item active" href="<?php echo BASE_URL.DS?>personnels/viewList/contractuels"> Employés</a> 
-                <a class="dropdown-item" href="<?php echo BASE_URL.DS?>personnels/sortie"><i class="fa fa-sign-out"></i> 
-                  Agents inactifs</a>
-             </div>
+       	<ul class="sidebar navbar-nav">
+         	<li class="nav-item dropdown <?php if($controller == 'personnels' || $controller == 'contrats' ) echo " show " ?>" >
+          		<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="collapse" data-target="#personnels-menu" aria-expanded="false" aria-controls="personnels-menu"> 
+            		<i class="fa fa-users"></i> Personnel
+            	</a>
+
+             	<div id="personnels-menu" class="collapse <?php if($controller == 'personnels' || $controller == 'contrats') echo "show"; ?>" aria-labelledby="personnels-menu" data-parent="">
+
+               		<a class="dropdown-item text-white" href="<?php echo BASE_URL.DS; ?>personnels/dashboard"> 
+               			Vue d'ensemble
+               		</a>
+               		<a class="dropdown-item text-white" href="<?php echo BASE_URL.DS; ?>personnels/indicateurs">
+               			<i class=""></i> Indicateurs
+               		</a>
+               		<a class="dropdown-item text-white" href="<?php echo BASE_URL.DS; ?>personnels/viewList/contractuels"> Employés
+               		</a> 
+                	<a class="dropdown-item text-white" href="<?php echo BASE_URL.DS; ?>personnels/sortie">
+                		<i class=""></i> Agents inactifs
+              		</a>
+             	</div>
             
-          </li>
+          	</li>
 
-          <li class="nav-item dropdown <?php if($controller == 'conges') echo "active" ?>"  >
-            <a  class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false" id="#profile-pills">
-           <i class="fa fa-tasks"></i> Gestion des Congés</a>
-          </li>
+          	<li class="nav-item dropdown <?php if($controller == 'conges') echo "active"; ?>">
+            	<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="collapse" data-target="#gestion-conges" aria-expanded="false" aria-controle="gestion-conges">
+           			<i class="fa fa-tasks"></i> Gestion des Congés
+           		</a>
+           		<div id="gestion-conges" class="collapse <?php if($controller == 'conges') echo "show"; ?>" aria-labelledby="gestion-conges" data-parent="">
+           			<a href="<?= BASE_URL.DS; ?>conges/dashboard" class="dropdown-item text-white">Vue d'ensemble</a>
+           			<a href="<?= BASE_URL.DS; ?>conges/planning" class="dropdown-item text-white">Planning des congés</a>
+           			<a href="<?= BASE_URL.DS; ?>conges/soldeconge" class="dropdown-item text-white">Solde des congés</a>
+           		</div>
+          	</li>
 
-          <li class="nav-item dropdown  <?php if($controller == 'paies') echo "active" ?>">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false" id="#paie" data-toggle="tab"> 
-          <i class="fa fa-book"></i> Paie</a>
-          </li>
+          	<li class="nav-item dropdown <?php if($controller == 'paies') echo "active"; ?>">
+            	<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="collapse" data-target="#paie" aria-expanded="false" aria-controls="paie"> 
+          			<i class="fa fa-book"></i> Paie
+          		</a>
+          		<div id="paie" class="collapse <?php if($controller == 'paies') echo "show"; ?>" aria-labelledby="paie" data-parent="">
+          			<a href="<?= BASE_URL.DS; ?>paies/configpaie" class="dropdown-item text-white">Période de paie</a>
 
-          <li class="nav-item dropdown <?php if($controller == 'certificats' || $controller == 'sanctions') echo "active" ?>"  >
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false" id="#certificat" > <i class="fa fa-file"></i> Certificats et Sanctions</a>
-          </li>
-           <li class="nav-item  dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false" id="#parametres" > <i class="fa fa-cogs"></i> Paramètres</a>
-          </li>
-      </ul>
+          			<a href="#" class="nav-link dropdown-toggle text-white" role="button" data-toggle="collapse" data-target="#indicateurs-perf" aria-expended="false" aria-controls="indicateurs-perf">
+          				Indicateurs de perf.
+          			</a>
+          			<div id="indicateurs-perf" class="collapse" aria-labelledby="indicateurs-perf" data-parent="#paie">
+          				<a href="<?= BASE_URL.DS; ?>paies/performance_emission" class="dropdown-item text-white">CRCD Emission</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/performance/4" class="dropdown-item text-white">CRCD Réception MTN</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/performance/9" class="dropdown-item text-white">CRCD Réception MOOV</a>
+          				<a href="<?= BASE_URL.DS; ?>paies" class="dropdown-item text-white">CRCD Backoffice MTN</a>
+          				<a href="<?= BASE_URL.DS; ?>paies" class="dropdown-item text-white">CRCD Commerciaux Terrains</a>
+          				<a href="<?= BASE_URL.DS; ?>paies" class="dropdown-item text-white">Digital MOOV</a>
+          				<a href="<?= BASE_URL.DS; ?>paies" class="dropdown-item text-white">Digital MTN</a>
+          				<a href="<?= BASE_URL.DS; ?>paies" class="dropdown-item text-white">Emission locale</a>
+          			</div>
 
-      <div id="content-wrapper">
+          			<a href="#" class="nav-link dropdown-toggle text-white" role="button" data-toggle="collapse" data-target="#elements-paie" aria-expended="false" aria-controls="elements-paie">
+						Eléments de paie
+          			</a>
+          			<div id="elements-paie" class="collapse" aria-labelledby="elements-paie" data-parent="#paie">
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/2" class="dropdown-item text-white">Administratif Direct</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/1" class="dropdown-item text-white">Administratif Indirect</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/3" class="dropdown-item text-white">Emission Offshore</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/7" class="dropdown-item text-white">Emission Locale</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/4" class="dropdown-item text-white">Réception MTN</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/9" class="dropdown-item text-white">Réception MOOV</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/10" class="dropdown-item text-white">Digital MTN</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/11" class="dropdown-item text-white">Digital MOOV</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/12" class="dropdown-item text-white">Commerciaux Terrains</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/13" class="dropdown-item text-white">BackOffice MOOV</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/14" class="dropdown-item text-white">BackOffice MTN</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/5" class="dropdown-item text-white">Entretien</a>
+          				<a href="<?= BASE_URL.DS; ?>paies/personnel/6" class="dropdown-item text-white">ABFPA</a>
+          			</div>
 
-        <div class="container-fluid">
-                        <?php  echo $content_for_layout;  ?>
-             </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container-fluid -->
-<!-- 
-             <footer class="sticky-footer">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright © Digit'All Solutions <?php //echo date("Y") ?></span>
-            </div>
-          </div>
-        </footer>
- -->
-        </div>
+          			<a href="#" class="nav-link dropdown-toggle text-white" role="button" data-toggle="collapse" data-target="#recapitulatif" aria-expended="false" aria-controls="recapitulatif">
+          				Récapitulatif
+          			</a>
+          			<div id="recapitulatif" class="collapse" aria-labelledby="recapitulatif" data-parent="#paie">
+          				<a href="<?= BASE_URL.DS; ?>/paies/viewfraismission" class="dropdown-item text-white">Frais de mission</a>
+          				<a href="<?= BASE_URL.DS; ?>/paies/viewavance" class="dropdown-item text-white">Avance sur salaire</a>
+          				<a href="<?= BASE_URL.DS; ?>/paies/viewretenue" class="dropdown-item text-white">Retenue sur salaire</a>
+          				<a href="<?= BASE_URL.DS; ?>/paies/viewregularisation" class="dropdown-item text-white">Régularisation</a>	
+          			</div>
 
-  
+
+          			<a href="<?= BASE_URL.DS; ?>/paies/etat" class="dropdown-item text-white">Exporter les états</a>
+          			<a href="<?= BASE_URL.DS; ?>/paies/etatfinancier" class="dropdown-item text-white">Exporter les états financiers</a>
+          		</div>
+          	</li>
+
+          	<li class="nav-item dropdown <?php if($controller == 'certificats' || $controller == 'sanctions') echo "active"; ?>">
+            	<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="collapse" data-target="#certificat" aria-expanded="false" aria-controls="certificat">
+          			<i class="fa fa-file"></i> Certificats et Sanctions
+          		</a>
+          		<div id="certificat" class="collapse <?php if($controller == 'certificats' || $controller == 'sanctions') echo "show"; ?>" aria-labelledby="certificat" data-parent="">
+          			<a href="<?= BASE_URL.DS; ?>certificats/index" class="dropdown-item text-white">
+          				Vue d'ensemble
+          			</a>
+          			<a href="<?= BASE_URL.DS; ?>certificats/listview" class="dropdown-item text-white">
+          				Liste des certificats
+          			</a>
+          			<a href="<?= BASE_URL.DS; ?>sanctions/listview" class="dropdown-item text-white">
+          				Liste des sanctions
+          			</a>
+          		</div>
+          	</li>
+
+           	<li class="nav-item dropdown">
+            	<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="collapse" data-target="#parametres" aria-expanded="false" aria-controls="parametres">
+            		<i class="fa fa-cogs"></i> Paramètres
+            	</a>
+            	<div id="parametres" class="collapse" aria-labelledby="parametres" data-parent="">
+            		<a href="<?= BASE_URL.DS; ?>parametres/annee" class="dropdown-item text-white">
+            			Gestion des années
+            		</a>
+            	</div>
+          	</li>
+      	</ul>
+
+      	<div id="content-wrapper">
+
+	        <div class="container-fluid">
+	          	<?php  echo $content_for_layout;  ?>
+	        </div>
+	                <!-- /.row -->
+	      	</div>
+	      <!-- /.container-fluid -->
+
+	    </div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -188,18 +258,7 @@
         </div>
       </div>
     </div>
-      <!-- jQuery -->
-    <script src="<?php echo  BASE_URL; ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo  BASE_URL; ?>/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo  BASE_URL; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-
-  $(".alert").delay(4000).slideUp(200, function() {
-    $(this).alert('close');
-});
-</script>
-
-</body>
+    
+  </body>
 
 </html>

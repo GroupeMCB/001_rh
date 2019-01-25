@@ -30,8 +30,6 @@ class PersonnelsController extends Controller
 			$cdd = $this->Personnel->findcount("type_contrat = '2' AND active = 1");
 			$this->set('cdd',$cdd);
 
-
-
 			//effectif cdi
 			$cdi = $this->Personnel->findcount("type_contrat = '3' AND active = 1");
 			$this->set('cdi',$cdi);

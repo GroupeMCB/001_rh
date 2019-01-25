@@ -358,6 +358,10 @@ footer.sticky-footer .copyright {
   font-size: 0.8rem;
 }
 
+.collapse .dropdown-item:hover {
+  color: #16181b !important;
+}
+
 @media (min-width: 768px) {
   footer.sticky-footer {
     width: calc(100% - 225px);
